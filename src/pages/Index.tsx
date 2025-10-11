@@ -1,23 +1,14 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Features from "@/components/Features";
-import Stats from "@/components/Stats";
-import Footer from "@/components/Footer";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Features />
-        <Stats />
-      </main>
-      <Footer />
-    </div>
-  );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/home");
+  }, [navigate]);
+
+  return null;
 };
 
 export default Index;
