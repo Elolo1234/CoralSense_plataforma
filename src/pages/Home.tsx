@@ -31,8 +31,23 @@ const Home = () => {
               onClick={() => navigate("/funcionalidades")} 
               className="text-foreground hover:text-primary transition-colors"
             >
-              Estações
+              Funcionalidades
             </button>
+            <button 
+              onClick={() => navigate("/doacoes")} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Doações
+            </button>
+            <button 
+              onClick={() => navigate("/plano")} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Planos
+            </button>
+            <Button variant="ghost" onClick={() => navigate("/cadastrar")}>
+              Cadastrar
+            </Button>
             <Button variant="ghost" onClick={() => navigate("/login")}>
               Login
             </Button>
