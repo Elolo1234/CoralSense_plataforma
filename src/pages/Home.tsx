@@ -15,15 +15,24 @@ const Home = () => {
             <span className="text-xl font-bold text-primary">CoralSense</span>
           </div>
           <nav className="flex items-center gap-6">
-            <a href="#monitoramento" className="text-foreground hover:text-primary">
+            <button 
+              onClick={() => navigate("/monitoramento")} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Monitoramento
-            </a>
-            <a href="#dashboard" className="text-foreground hover:text-primary">
+            </button>
+            <button 
+              onClick={() => navigate("/dashboard")} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Dashboard
-            </a>
-            <a href="#estacoes" className="text-foreground hover:text-primary">
+            </button>
+            <button 
+              onClick={() => navigate("/funcionalidades")} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Estações
-            </a>
+            </button>
             <Button variant="ghost" onClick={() => navigate("/login")}>
               Login
             </Button>
