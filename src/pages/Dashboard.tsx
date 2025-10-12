@@ -53,8 +53,8 @@ const Dashboard = () => {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-sm text-muted-foreground">Sistema C</span>
-            <Button variant="outline" size="sm">
-              Configurações
+            <Button variant="outline" size="sm" onClick={() => navigate("/perfil")}>
+              Perfil
             </Button>
           </div>
         </div>
@@ -111,6 +111,18 @@ const Dashboard = () => {
                 </Button>
                 <Button className="w-full" variant="outline" onClick={() => navigate("/corais")}>
                   Corais da Costa Brasileira
+                </Button>
+                <Button className="w-full" variant="outline" onClick={() => navigate("/funcionalidades")}>
+                  Funcionalidades
+                </Button>
+                <Button className="w-full" variant="outline" onClick={() => navigate("/cadastrar-pesquisa")}>
+                  Cadastrar Pesquisa
+                </Button>
+                <Button className="w-full" variant="outline" onClick={() => navigate("/doacoes")}>
+                  Doações
+                </Button>
+                <Button className="w-full" variant="outline" onClick={() => navigate("/plano")}>
+                  Planos
                 </Button>
               </div>
             </CardContent>
