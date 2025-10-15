@@ -2,15 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import abrolhosReef from "@/assets/abrolhos-reef.jpg";
-import atolRocas from "@/assets/atol-rocas.jpg";
-import noronhaReef from "@/assets/noronha-reef.jpg";
-import amazonReef from "@/assets/amazon-reef.jpg";
-import tamandareReef from "@/assets/tamandare-reef.jpg";
-import costaCorais from "@/assets/costa-corais.jpg";
 
 const Corais = () => {
   const navigate = useNavigate();
+  const basePath = import.meta.env.BASE_URL;
 
   const reefs = [
     {
@@ -19,7 +14,7 @@ const Corais = () => {
       description: "O maior complexo de recifes de coral do Atlântico Sul",
       area: "913 km²",
       status: "Protegido",
-      image: abrolhosReef
+      image: `${basePath}images/abrolhos-reef.jpg`
     },
     {
       name: "Atol das Rocas",
@@ -27,7 +22,7 @@ const Corais = () => {
       description: "Único atol no Atlântico Sul ocidental",
       area: "7.2 km²",
       status: "Reserva Biológica",
-      image: atolRocas
+      image: `${basePath}images/atol-rocas.jpg`
     },
     {
       name: "Fernando de Noronha",
@@ -35,7 +30,7 @@ const Corais = () => {
       description: "Arquipélago com rica biodiversidade marinha",
       area: "26 km²",
       status: "Parque Nacional",
-      image: noronhaReef
+      image: `${basePath}images/noronha-reef.jpg`
     },
     {
       name: "Corais da Amazônia",
@@ -43,7 +38,7 @@ const Corais = () => {
       description: "Recifes descobertos recentemente na foz do Amazonas",
       area: "9.500 km²",
       status: "Em estudo",
-      image: amazonReef
+      image: `${basePath}images/amazon-reef.jpg`
     },
     {
       name: "Recifes de Tamandaré",
@@ -51,7 +46,7 @@ const Corais = () => {
       description: "Importante área de conservação marinha",
       area: "214 km²",
       status: "APA",
-      image: tamandareReef
+      image: `${basePath}images/tamandare-reef.jpg`
     },
     {
       name: "Costa dos Corais",
@@ -59,7 +54,7 @@ const Corais = () => {
       description: "Maior unidade de conservação marinha costeira do Brasil",
       area: "413.000 ha",
       status: "APA",
-      image: costaCorais
+      image: `${basePath}images/costa-corais.jpg`
     }
   ];
 
