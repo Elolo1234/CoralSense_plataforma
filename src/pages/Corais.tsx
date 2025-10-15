@@ -2,6 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import abrolhosReef from "@/assets/abrolhos-reef.jpg";
+import atolRocas from "@/assets/atol-rocas.jpg";
+import noronhaReef from "@/assets/noronha-reef.jpg";
+import amazonReef from "@/assets/amazon-reef.jpg";
+import tamandareReef from "@/assets/tamandare-reef.jpg";
+import costaCorais from "@/assets/costa-corais.jpg";
 
 const Corais = () => {
   const navigate = useNavigate();
@@ -12,42 +18,48 @@ const Corais = () => {
       location: "Bahia",
       description: "O maior complexo de recifes de coral do Atlântico Sul",
       area: "913 km²",
-      status: "Protegido"
+      status: "Protegido",
+      image: abrolhosReef
     },
     {
       name: "Atol das Rocas",
       location: "Rio Grande do Norte",
       description: "Único atol no Atlântico Sul ocidental",
       area: "7.2 km²",
-      status: "Reserva Biológica"
+      status: "Reserva Biológica",
+      image: atolRocas
     },
     {
       name: "Fernando de Noronha",
       location: "Pernambuco",
       description: "Arquipélago com rica biodiversidade marinha",
       area: "26 km²",
-      status: "Parque Nacional"
+      status: "Parque Nacional",
+      image: noronhaReef
     },
     {
       name: "Corais da Amazônia",
       location: "Amazônia",
       description: "Recifes descobertos recentemente na foz do Amazonas",
       area: "9.500 km²",
-      status: "Em estudo"
+      status: "Em estudo",
+      image: amazonReef
     },
     {
       name: "Recifes de Tamandaré",
       location: "Pernambuco",
       description: "Importante área de conservação marinha",
       area: "214 km²",
-      status: "APA"
+      status: "APA",
+      image: tamandareReef
     },
     {
       name: "Costa dos Corais",
       location: "Alagoas/Pernambuco",
       description: "Maior unidade de conservação marinha costeira do Brasil",
       area: "413.000 ha",
-      status: "APA"
+      status: "APA",
+      image: costaCorais
     }
   ];
 
@@ -70,7 +82,14 @@ const Corais = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reefs.map((reef, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={reef.image} 
+                  alt={`${reef.name} - ${reef.location}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
